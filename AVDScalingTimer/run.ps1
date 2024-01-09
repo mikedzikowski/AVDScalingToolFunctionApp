@@ -16,11 +16,10 @@ $MaintenanceTagName = "Maintenace"
 $MinimumNumberOfRDSH = 1
 $TimeDifference = "-5:00"
 [double]$SessionThresholdPerCPU = 1
+$SubscriptionName = "ZTALAB"
 
 # Get the current universal time in the default string format.
 $currentUTCtime = (Get-Date).ToUniversalTime()
-
-$null = Connect-AzAccount -Identity -Environment AzureUSGovernment
 
 # The 'IsPastDue' property is 'true' when the current function invocation is later than scheduled.
 if ($Timer.IsPastDue) {
@@ -305,10 +304,10 @@ try
     $AzContext = $null
     try
     {
-        $AzAuth = Connect-AzAccount -Environment AzureUSGovernment -Identity 
-        $null = Set-AzContext -subscription ZTAlab
+        $AzAuth = Connect-AzAccount -Environment $EnvironmentName -Identity
+        $null = Set-AzContext -subscription $SubscriptionName
 
-#        Set-AzContext 
+#        Set-AzContext
         # if (!$AzAuth -or !$AzAuth.Context) {
         #     throw $AzAuth
         # }

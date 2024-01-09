@@ -14,7 +14,7 @@
 
 $ErrorActionPreference = 'Stop'
 
-Import-Module 'PSFrameWork','Az.Compute', 'Az.Accounts' -ErrorAction Stop
+Import-Module 'Az.Compute', 'Az.Accounts', 'Az.DesktopVirtualization', 'Az.Resources' -ErrorAction Stop
 
 
 if ($env:MSI_SECRET) {
