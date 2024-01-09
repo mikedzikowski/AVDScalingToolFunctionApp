@@ -2,9 +2,7 @@
 [CmdletBinding(SupportsShouldProcess)]
 param($Timer)
 
-#,$BeginPeakTime,$EndPeakTime,$EnvironmentName,$LimitSecondsToForceLogOffUser,$LogOffMessageBody , $LogOffMessageTitle, $MaintenanceTagName, $MinimumNumberOfRDSH, $ResourceGroupName, $TimeDifference, $SessionThresholdPerCPU)
-
-$HostPoolName = $env:HostpoolName
+$HostPoolName = "AVDHOSTPOOL"
 $EndPeakTime = "9:40"
 $ResourceGroupName = "avd"
 $BeginPeakTime = "9:10"
