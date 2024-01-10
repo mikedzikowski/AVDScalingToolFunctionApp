@@ -2,19 +2,19 @@
 [CmdletBinding(SupportsShouldProcess)]
 param($Timer)
 
-$HostPoolName = "AVDHOSTPOOL"
-$EndPeakTime = "9:40"
-$ResourceGroupName = "avd"
-$BeginPeakTime = "9:10"
-$EnvironmentName = "AzureUSGovernment"
-[int]$LimitSecondsToForceLogOffUser = 60
-$LogOffMessageBody = "bye"
-$LogOffMessageTitle = "get ready"
-$MaintenanceTagName = "Maintenace"
+$HostPoolName = ""
+$EndPeakTime = ""
+$ResourceGroupName = ""
+$BeginPeakTime = ""
+$EnvironmentName = ""
+[int]$LimitSecondsToForceLogOffUser = 0
+$LogOffMessageBody = ""
+$LogOffMessageTitle = ""
+$MaintenanceTagName = ""
 $MinimumNumberOfRDSH = 1
-$TimeDifference = "-5:00"
+$TimeDifference = ""
 [double]$SessionThresholdPerCPU = 1
-$SubscriptionName = "ZTALAB"
+$SubscriptionName = ""
 
 # Get the current universal time in the default string format.
 $currentUTCtime = (Get-Date).ToUniversalTime()
